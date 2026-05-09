@@ -16,7 +16,8 @@ Se utilizaron secuencias públicas de Escherichia coli obtenidas desde:
 Formato:
 - FASTQ (lecturas crudas)
 ## 4. Flujo de trabajo
-## 5. Resultados
+## 5. Resultados  
+Aqui van los resultados
 ## 6. Contribución individual
 Resumen breve
 ## 7. Cómo reproducir (scripts)
