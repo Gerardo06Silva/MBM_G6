@@ -11,6 +11,9 @@ Procesar lecturas FASTQ de Escherichia coli mediante control de calidad, depurac
 ## 3. Dataset
 Se utilizaron secuencias públicas de Escherichia coli obtenidas desde:
 - NCBI SRA (ejemplo: SRR000001)
+
+Formato:
+- FASTQ (lecturas crudas)
 ## 4. Flujo de trabajo
 ## 5. Resultados
 ## 6. Contribución individual
