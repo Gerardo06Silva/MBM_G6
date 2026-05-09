@@ -1,15 +1,15 @@
 # MBM_G6
 Omicas Grupo 6
 # Proyecto: [Título]
-## Integrantes
+## 1. Integrantes
 - Gerardo Silva
 - Katherine Cevallos
 - Johanna Montenegro P.
   
-## Objetivo
-## Dataset
-## Flujo de trabajo
-## Resultados
-## Contribución individual
+## 2. Objetivo
+## 3. Dataset
+## 4. Flujo de trabajo
+## 5. Resultados
+## 6. Contribución individual
 Resumen breve
-## Cómo reproducir (scripts)
+## 7. Cómo reproducir (scripts)
