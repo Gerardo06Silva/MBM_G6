@@ -2,7 +2,10 @@
 Omicas Grupo 6
 # Proyecto: [Título]
 ## Integrantes
-- Nombre 1
+- Gerardo Silva
+- Katherine Cevallos
+- Johanna Montenegro P.
+  
 ## Objetivo
 ## Dataset
 ## Flujo de trabajo
