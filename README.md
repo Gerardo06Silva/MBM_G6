@@ -8,6 +8,8 @@ Omicas Grupo 6
   
 ## 2. Objetivo
 Procesar lecturas FASTQ de Escherichia coli mediante control de calidad, depuración y ensamblaje de novo, con el fin de obtener una secuencia genómica evaluable e identificar parámetros relevantes como longitud del ensamblaje, contenido GC, cobertura y posibles regiones codificantes.
+
+adadjfljj
 ## 3. Dataset
 ## 4. Flujo de trabajo
 ## 5. Resultados
