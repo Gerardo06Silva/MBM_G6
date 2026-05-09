@@ -7,7 +7,7 @@ Omicas Grupo 6
 - Johanna Montenegro P.
   
 ## 2. Objetivo
-Evaluar la calidad de lecturas de secuenciación, realizar el ensamblaje de novo del genoma de Escherichia coli y analizar características genómicas básicas como el contenido GC y la presencia de regiones potencialmente codificantes, mediante herramientas bioinformáticas en línea de comandos.
+Procesar lecturas FASTQ de Escherichia coli mediante control de calidad, depuración y ensamblaje de novo, con el fin de obtener una secuencia genómica evaluable e identificar parámetros relevantes como longitud del ensamblaje, contenido GC, cobertura y posibles regiones codificantes.
 ## 3. Dataset
 ## 4. Flujo de trabajo
 ## 5. Resultados
