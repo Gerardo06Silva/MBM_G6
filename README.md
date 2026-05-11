@@ -7,7 +7,7 @@ Omicas Grupo 6
 - Johanna Montenegro P.
   
 ## 2. Objetivo
-Procesar lecturas FASTQ de Escherichia coli mediante control de calidad, depuración y ensamblaje de novo, con el fin de obtener una secuencia genómica evaluable e identificar parámetros relevantes como longitud del ensamblaje, contenido GC, cobertura y posibles regiones codificantes.
+Procesar lecturas FASTQ de Escherichia coli mediante control de calidad, depuración y ensamblaje de novo, con el fin de obtener una secuencia genómica evaluable e identificar parámetros relevantes como longitud del ensamblaje, contenido GC, cobertura y posibles regiones codificantes.  
 ## 3. Dataset
 Se utilizaron secuencias públicas de Escherichia coli obtenidas desde:
 - NCBI SRA
@@ -22,7 +22,8 @@ Formato:
 
 
 ## 4. Flujo de trabajo
-## 5. Resultados
+## 5. Resultados  
+Aqui van los resultados
 ## 6. Contribución individual
 Resumen breve
 ## 7. Cómo reproducir (scripts)
