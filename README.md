@@ -13,6 +13,8 @@ Se utilizaron secuencias públicas de Escherichia coli obtenidas desde:
 - NCBI SRA
 SRX33263328: WGS of Escherichia coli
 
+https://www.ncbi.nlm.nih.gov/sra/?term=SRX33263328
+
 <img width="489" height="79" alt="image" src="https://github.com/user-attachments/assets/78716019-c444-4367-a96a-d73f56392abf" />
 
 
