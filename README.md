@@ -11,6 +11,8 @@ Procesar lecturas FASTQ de Escherichia coli mediante control de calidad, depurac
 Se utilizaron secuencias públicas de Escherichia coli obtenidas desde:
 - NCBI SRA (ejemplo: SRR000001)
 ## 4. Flujo de trabajo
+El tutorial que se está utilizando como modelo para el proyecto corresponde al tutorial 2 “Assembly of metagenomic sequencing data”, de la lista de tutoriales proporcionados por la herramienta bioinformatica Galaxy. 
+Link:https://training.galaxyproject.org/training-material/topics/assembly/tutorials/metagenomics-assembly/tutorial.html 
 ## 5. Resultados
 ## 6. Contribución individual
 Resumen breve
