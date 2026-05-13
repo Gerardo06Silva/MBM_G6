@@ -23,3 +23,10 @@ interpretación biológica
 
 ### 4. Discusión
 interpretación biológica (citar) 
+
+### 5. Conclusiones  
+
+### 6. Referencias bibliográficas  
+Genere un grupo en Mendeley con sus compañeros de proyecto. Coloque todas sus fuentes y los respectivos PDFs de cada una  
+## NOTA
+:eyes: Deberá invitarme a su grupo en Mendeley o las plataformas usadas al correo bioupsmantigua@gmail.comhola
