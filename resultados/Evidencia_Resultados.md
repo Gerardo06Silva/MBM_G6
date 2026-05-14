@@ -1,4 +1,84 @@
+# CAPTURAS DE PANTALLA DE RESULTADOS OBTENIDOS
 
+## 1. Descarga de secuencia
+
+### 1.1 Forward
+
+<img width="324" height="228" alt="image" src="https://github.com/user-attachments/assets/7c2d89e0-34a6-4009-a477-63f64f27ad5f" />
+
+Figura 8. Información del Dataset a partir de la herramienta Download and Extract Reads in FASTQ de la secuencia Forward. 
+
+
+### 1.2 Reverse
+
+<img width="339" height="228" alt="image" src="https://github.com/user-attachments/assets/2b03998e-e279-4aea-8600-18470fb4660d" />
+
+Figura 9. Información del Dataset a partir de la herramienta Download and Extract Reads in FASTQ de la secuencia Reverse 
+
+
+## 2. Analizar la calidad de la secuencia obtenida -FastQ- 
+
+### 2.1	Reporte FastQC para calidad de secuencias. Forward 
+
+<img width="345" height="228" alt="image" src="https://github.com/user-attachments/assets/cc0eb8fc-2d7b-45e7-aedb-0fa7bb4715c4" />
+
+Figura 10. Resumen del reporte FastQC secuencia Forward 
+
+
+<img width="335" height="257" alt="image" src="https://github.com/user-attachments/assets/fb66df37-1073-42dc-95d0-de89a7d31367" />
+
+Figura 11.  Gráfico de la calidad de Secuencias por Base, secuencia Forward. 
+
+
+<img width="368" height="277" alt="image" src="https://github.com/user-attachments/assets/5a4c9daa-ef0d-4b0f-aeff-d80ce48cf0d2" />
+
+Figura 12.  Gráfico de la calidad de Secuencias por celda, secuencia Forward.
+
+
+<img width="363" height="272" alt="image" src="https://github.com/user-attachments/assets/e83ec109-9822-46b2-adbb-d80ed2fbe064" />
+
+Figura 13.  Gráfico del contenido de Secuencias por base, secuencia Forward. 
+
+
+<img width="370" height="271" alt="image" src="https://github.com/user-attachments/assets/4d463a17-fb90-4389-8715-29f8b6758657" />
+
+Figura 14.  Gráfico del contenido de GC por secuencia, secuencia Forward. 
+
+
+### 2.2	2.	Reporte FastQC para calidad de secuencias. Reverse
+
+<img width="328" height="221" alt="image" src="https://github.com/user-attachments/assets/cdb1595f-ec34-4596-8ae3-34c399256b1b" />
+
+Figura 15.  Resumen del reporte FastQC secuencia Reverse. 
+
+
+<img width="346" height="257" alt="image" src="https://github.com/user-attachments/assets/06dcac4e-aa9e-4804-ac50-fd6592dde6aa" />
+
+Figura 16.  Gráfico de la calidad de Secuencias por Base, secuencia Reverse. 
+
+
+<img width="334" height="259" alt="image" src="https://github.com/user-attachments/assets/ed9b6943-5341-4f9b-b46c-8e5df6f81b17" />
+
+Figura 17.  Gráfico de la calidad de Secuencias por celda, secuencia Reverse. 
+
+
+<img width="335" height="251" alt="image" src="https://github.com/user-attachments/assets/a788189a-2d1d-4f0d-9614-021603ee7fba" />
+
+Figura 18.  Gráfico del contenido de Secuencias por base, secuencia Reverse. 
+
+
+<img width="353" height="263" alt="image" src="https://github.com/user-attachments/assets/30ff5344-2a82-42d0-84b4-658273faffc2" />
+
+Figura 19.  Gráfico del contenido de GC por secuencia, secuencia Reverse. 
+
+
+## 3. Primer corte y limpieza de la secuencia (Trimmomatic)
+
+<img width="442" height="253" alt="image" src="https://github.com/user-attachments/assets/3c817f2c-7415-41f2-85cb-8b6c23dfca84" />
+
+Figura 20. Visualización del primer corte de la secuencia Forward 
+
+ 
 
  
  <img width="600" height="270" alt="imagen 1" src="https://github.com/user-attachments/assets/fbb7c643-87df-40ea-b7cd-7881af66e6ad" />
