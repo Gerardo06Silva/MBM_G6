@@ -21,7 +21,6 @@ Formato:
 - FASTQ (lecturas crudas)
 
 
-
 ## 4. Flujo de trabajo
 El tutorial que se está utilizando como modelo para el proyecto corresponde al tutorial 2 “Assembly of metagenomic sequencing data”, de la lista de tutoriales proporcionados por la herramienta bioinformatica Galaxy. 
 
@@ -34,5 +33,8 @@ El ensamblaje de Escherichia coli presentó 109 contigs, una longitud total de 4
 En conjunto, los resultados son aceptables para un ensamblaje preliminar con lecturas Illumina, aunque los 109 contigs evidencian que el genoma aún está fragmentado. La anotación con Prokka identificó aproximadamente 4.462 genes, 4.368 CDS, 83 tRNAs, 16 rRNAs y 1 tmRNA, lo que demuestra que el ensamblaje contiene regiones funcionales suficientes para futuros análisis de anotación, metabolismo bacteriano y comparación genómica.
 
 ## 6. Contribución individual
-Resumen breve
+
+
+Johanna Montenegro: justificación de la selección del microorganismo a estudiar, planteamiento de hipótesis, interpretación biológica de los resultados, interacción con Github. 
+
 ## 7. Cómo reproducir (scripts)
