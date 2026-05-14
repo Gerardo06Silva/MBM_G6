@@ -24,7 +24,10 @@ Formato:
 
 ## 4. Flujo de trabajo
 El tutorial que se está utilizando como modelo para el proyecto corresponde al tutorial 2 “Assembly of metagenomic sequencing data”, de la lista de tutoriales proporcionados por la herramienta bioinformatica Galaxy. 
-Link:https://training.galaxyproject.org/training-material/topics/assembly/tutorials/metagenomics-assembly/tutorial.html 
+
+Link:
+https://training.galaxyproject.org/training-material/topics/assembly/tutorials/metagenomics-assembly/tutorial.html 
+
 ## 5. Resultados 
 Aqui van los resultados
 ## 6. Contribución individual
