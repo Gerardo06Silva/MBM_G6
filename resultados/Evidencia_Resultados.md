@@ -1,4 +1,5 @@
 
+
  
  <img width="600" height="270" alt="imagen 1" src="https://github.com/user-attachments/assets/fbb7c643-87df-40ea-b7cd-7881af66e6ad" />
 Figura 26. Reporte de calidad generado por FastQC para la lectura Reverse después del filtrado con Trimmomatic. 
