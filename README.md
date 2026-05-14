@@ -16,16 +16,14 @@ https://www.ncbi.nlm.nih.gov/sra/?term=SRX33263328
 
 <img width="489" height="79" alt="image" src="https://github.com/user-attachments/assets/78716019-c444-4367-a96a-d73f56392abf" />
 
-
 Formato:
 - FASTQ (lecturas crudas)
-
-
 
 ## 4. Flujo de trabajo
 El tutorial que se está utilizando como modelo para el proyecto corresponde al tutorial 2 “Assembly of metagenomic sequencing data”, de la lista de tutoriales proporcionados por la herramienta bioinformatica Galaxy. 
 Link:https://training.galaxyproject.org/training-material/topics/assembly/tutorials/metagenomics-assembly/tutorial.html 
-## 5. Resultados
+<img width="673" height="900" alt="diagrama de flujo" src="https://github.com/user-attachments/assets/73e9e548-b38c-4834-8209-53b4892372c6" />
+
 ## 5. Resultados  
 Aqui van los resultados
 ## 6. Contribución individual
