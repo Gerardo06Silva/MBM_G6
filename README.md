@@ -14,6 +14,9 @@ Se utilizaron secuencias públicas de Escherichia coli obtenidas desde:
 SRX33263328: WGS of Escherichia coli  
 https://www.ncbi.nlm.nih.gov/sra/?term=SRX33263328  
 <img width="489" height="79" alt="image" src="https://github.com/user-attachments/assets/78716019-c444-4367-a96a-d73f56392abf" />
+
+Formato:
+- FASTQ (lecturas crudas)
   
 Formato: FASTQ (lecturas crudas)  
   
@@ -23,6 +26,9 @@ Debe ser una secuencia WGS (whole genome secuence) para evitar metagenomas o mic
 ## 4. Flujo de trabajo
 El tutorial que se está utilizando como modelo para el proyecto corresponde al tutorial 2 “Assembly of metagenomic sequencing data”, de la lista de tutoriales proporcionados por la herramienta bioinformatica Galaxy. 
 Link:https://training.galaxyproject.org/training-material/topics/assembly/tutorials/metagenomics-assembly/tutorial.html 
+<img width="297" height="419" alt="image" src="https://github.com/user-attachments/assets/0d7064c2-e8c6-4dc5-9e9a-e7bbd639c40e" />
+
+
 ## 5. Resultados  
 Aqui van los resultados
 ## 6. Contribución individual  
