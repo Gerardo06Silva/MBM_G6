@@ -13,21 +13,32 @@ Se utilizaron secuencias públicas de Escherichia coli obtenidas desde:
 SRX33263328: WGS of Escherichia coli
 
 https://www.ncbi.nlm.nih.gov/sra/?term=SRX33263328
-
 <img width="489" height="79" alt="image" src="https://github.com/user-attachments/assets/78716019-c444-4367-a96a-d73f56392abf" />
-
 
 Formato:
 - FASTQ (lecturas crudas)
 
-
-
 ## 4. Flujo de trabajo
 El tutorial que se está utilizando como modelo para el proyecto corresponde al tutorial 2 “Assembly of metagenomic sequencing data”, de la lista de tutoriales proporcionados por la herramienta bioinformatica Galaxy. 
 Link:https://training.galaxyproject.org/training-material/topics/assembly/tutorials/metagenomics-assembly/tutorial.html 
-## 5. Resultados
 ## 5. Resultados  
 Aqui van los resultados
 ## 6. Contribución individual
 Resumen breve
 ## 7. Cómo reproducir (scripts)
+Para reproducir este workflow se debe seguir el History ejecutado dentro de la plataforma Galaxy.  
+El Flujo general seguido sera:
+---
+```text
+Descarga de archivos FASTQ crudo mediante el codigo SRR para  NCBI
+ ↓
+Control de calidad (FastQC) a las secuencias descargadas
+ ↓
+Trimming (Trimmomatic) Se realiza cortes y limpieza dentro de la secuencia descargada.
+ ↓
+Ensamblaje (Shovill)
+ ↓
+Evaluación del ensamblaje (Quast)
+ ↓
+Anotación (Prokka)
+```
