@@ -9,8 +9,12 @@
 Procesar lecturas FASTQ de Escherichia coli mediante control de calidad, depuración y ensamblaje de novo, con el fin de obtener una secuencia genómica evaluable e identificar parámetros relevantes como longitud del ensamblaje, contenido GC, cobertura y posibles regiones codificantes.
 
 ### 1. Introducción
-contexto biológico
-importancia del análisis
+Echerichia coli es uno de los microorganismos modelo más utilizados en biología molecular, microbiología y bioinformática debido a que posee un genoma relativamente pequeño, ampliamente caracterizado y disponible en múltiples bases de datos genómicas públicas. Además de su importancia como organismo modelo, algunas cepas de E. coli tienen relevancia clínica y biotecnológica, ya que pueden participar en procesos industriales, producción de proteínas recombinantes y estudios relacionados con resistencia antimicrobiana y evolución bacteriana (Yibar et al., 2024).
+
+El desarrollo de tecnologías de secuenciación masiva ha permitido generar grandes volúmenes de datos genómicos bacterianos en formatos como FASTQ, facilitantdo el análisis bioinformático de genomas completos mediante flujos de trabajo de ensamblaje y anotación. Actualmente, herramientas como FastQC, Trimmomatic, SPAdes, QUAST y Prokka son ampliamente utilizadas para evaluar calidad de lecturas, ensamblar genomas de novo y caracterizar regiones funcionales bacterianas (Batut et al., 2024). Estas herramientas permiten obtener métricas importantes como contenido GC, número de contigs, continuidad del ensamblaje y predicción de genes codificantes.
+
+En este proyecto se trabajó con secuencias WGS (Whole Genome Sequencing) de Echerichia coli obtenidas desde el repositorio SRA del NCBI, específicamente el dataset SRR38439492. El objetivo fue procesar lecturas FASTQ mediante control de calidad, depuración y ensamblaje de novo, con el fin de obtener un ensamblaje genómico evaluable e identificar parámetros relevantes como longitud del ensamblaje, cobertura y regiones potencialmente codificantes. Este tipo de análisis constituye una base fundamental para estudios de genómica comparativa, evolución bacteriana y caracterización funcional de microorganismos procariotas (Schwengers et al., 2021).
+
 
 ### 2. Metodología  
 En primer lugar, se obtuvieron las secuencias crudas en formato FASTQ desde la base de datos NCBI SRA. Estos archivos contienen las lecturas generadas por secuenciación, junto con la información de calidad de cada base. La descarga de los datos se realizó mediante herramientas como NCBI SRA y la plataforma Galaxy, obteniendo como resultado los archivos FASTQ iniciales.  
@@ -33,6 +37,16 @@ interpretación biológica (citar)
 ### 5. Conclusiones  
 
 ### 6. Referencias bibliográficas  
-Genere un grupo en Mendeley con sus compañeros de proyecto. Coloque todas sus fuentes y los respectivos PDFs de cada una  
+Genere un grupo en Mendeley con sus compañeros de proyecto. Coloque todas sus fuentes y los respectivos PDFs de cada una 
+
+
+Batut, B., et al. (2024). Assembly of metagenomic sequencing data. Galaxy Training Network. https://training.galaxyproject.org/training-material/topics/assembly/tutorials/metagenomics-assembly/tutorial.html
+
+Schwengers, O., Jelonek, L., Dieckmann, M. A., Beyvers, S., Blom, J., & Goesmann, A. (2021). Bakta: Rapid and standardized annotation of bacterial genomes via alignment-free sequence identification. Microbial Genomics, 7(11), 000685. https://doi.org/10.1099/mgen.0.000685
+
+Yibar, A., et al. (2024). First report and genomic characterization of Escherichia coli O111 from cattle. BMC Genomics, 25, 10945. https://doi.org/10.1186/s12864-024-10945-4
+
+
+
 ## NOTA
 :eyes: Deberá invitarme a su grupo en Mendeley o las plataformas usadas al correo bioupsmantigua@gmail.comhola
