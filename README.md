@@ -41,6 +41,8 @@ Se eligió esta secuencia por sus características.
 Debe ser una secuencia WGS (whole genome secuence) para evitar metagenomas o microbiomas, además de tener un peso de 169.1 MB y 1 106,152 de spots para asegurar una cobertura apropiada para ensamblar el genoma.  
   
 Para reproducir este workflow se debe seguir el History ejecutado dentro de la plataforma Galaxy.  
+https://usegalaxy.org/u/gerardoalex/h/mbm-g6-workflow-secuencia-e-coli  
+  
 El Flujo general seguido sera:
 ```text
 Descarga de archivos FASTQ crudo mediante el codigo SRR para  NCBI
