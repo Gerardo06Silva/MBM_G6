@@ -275,7 +275,18 @@ La anotación funcional obtenida mediante Prokka permitió identificar múltiles
 La tabla de anotación mostrada en la figura 15 evidencia la identificación de genes asociados con proteínas de membrana, trasnporte de aminoácidos y funciones metabólicas específicas, como metN, metQ, nlpE, nlpE y arfB. Estas funciones son biológicamente relevantes debido a que participan en transporte molecular, respuestas celular y mantenimiento fisiolófico bacteriano. La detección de proteínas hipotéticcas también es común en ensamblajes bacterianos y refleja regiones cuya función aún no ha sido completamente caracterizada experimentalmente (Lobb et al., 2020). En conjunto, los resultados indican que el ensamblaje generado posee suficiente calidad estructural y funcional para estudios posteriores de genómica comparativa, análisis funcional y caracterización de *E. coli*.
 </p>
 
-### 5. Conclusiones 
+### 5. Aplicaciones 
+
+### 5.1 Vigilancia epidemiológica y salud pública
+
+Los resultados obtenidos mediante el ensamblaje con Shovill, la evaluación con QUAST y la anotación funcional con Prokka permiten aplicar herramientas de genómica bacteriana en vigilancia epidemiológica en *Escherichia coli*. La identificación de genes codificantes, regiones funcionales y métricas de calidad del ensamblaje facilita la comparación entre cepas bacterianas y la detección de posibles factores asociados con virulencia o resistencia antimicrobiana. Este tipo de análisis ha sido ampliamente utiliado en el monitoreo de cepas patógenas de *E. coli* involucradas en brotes alimentarios y contaminación ambiental, permitiendo establecer relaciones filogenéticas, identificar genes de resistencia antimicrobiana y rastrear fuentes de infección mediante secuenciación genómica completa (Feldgarden et al., 2021; Schwengers et al., 2021).
+
+
+### 5.2 Biotecnología y producción de proteínas recombinantes
+
+La información obtenida en este proyecto también tiene aplicación en biotecnología e ingeniería genética, debido a que *Escherichia coli* continúa siendo uno de los principales microorganismos utilizados para producción de proteínas recombinantes y estudios metabólicos. La anotación funcional obtenida mediante Prokka permitió identificar genes asociados con transporte molecular, metabolismo y síntesis proteica, lo cual constituye una base importante para futuras aplicaciones en biología sintética y optimización bacteriana. Actualmente, el análisis genómico y funcional de cepas de *E. coli* es utilizado en el desarrollo de microorganismos destinados a la producción de insulina recombinante, enzimas industriales y compuestos de interés biomédico (Batut et al., 2024; Lobb et al., 2020).
+
+### 6. Conclusiones 
 <p align="justify">
 La implementación del flujo de trabajo automatizado Shovill, soportado por el motor iterativo multi-k-mer de SPAdes y refinado mediante algoritmos de pulido de consenso (BWA-MEM y Pilon), demostró ser una estrategia bioinformática altamente eficiente para la reconstrucción genómica. A pesar de contar con una profundidad de secuenciación moderada (27.75X), el sistema logró sintetizar con éxito las lecturas en un genoma borrador de alta fidelidad, minimizando la fragmentación a solo 88 contigs y consolidando un tamaño total (4.58 Mbp) completamente el perfil biológico de Escherichia coli.
 </p>
@@ -283,6 +294,7 @@ La implementación del flujo de trabajo automatizado Shovill, soportado por el m
 <p align="justify">
 La anotación realizada con Prokka permitió identificar correctamente genes codificantes y elementos funcionales esenciales del genoma de *E. coli*, demostrando que el ensamblaje obtenido es biológicamente interpretabla y adecuado para futuros análisis genómicos y funcionales.
 </p>
+
 
 ### 7. Referencias bibliográficas  
 
@@ -300,4 +312,6 @@ Lobb, B., Tremblay, B. J. M., Moreno-Hagelsieb, G., & Doxey, A. C. (2020). An as
 Schwengers, O., Jelonek, L., Dieckmann, M. A., Beyvers, S., Blom, J., & Goesmann, A. (2021). Bakta: Rapid and standardized annotation of bacterial genomes via alignment-free sequence identification. Microbial Genomics, 7(11), 000685. https://doi.org/10.1099/mgen.0.000685
 
 Yibar, A., et al. (2024). First report and genomic characterization of Escherichia coli O111 from cattle. BMC Genomics, 25, 10945. https://doi.org/10.1186/s12864-024-10945-4
+
+
 
