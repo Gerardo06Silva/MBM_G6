@@ -51,11 +51,11 @@ El proceso de limpieza modificó los parámetros estructurales de la siguiente m
 - Rendimiento global: La genoteca final aporta 138.8 Mbp. El contenido global de GC se mantuvo estable en un 50%.
 - Longitud de secuencia (Sequence Length Distribution): A diferencia de la longitud uniforme de 150 pb observada en las secuencias crudas, este módulo ahora reporta una distribución variable que oscila entre 25 pb y 133 pb. 
 
-##### 3.2.2 Evaluación de Módulos Corregidos y Optimizados
+##### 3.2.2 Evaluación de Módulos Corregidos y Optimizados.
 -	Contenido de bases por posición (Per base sequence content): Este módulo pasó de una condición de fallo crítico a un estado completamente óptimo. Las fluctuaciones severas que superaban el 10% de divergencia en los primeros 10 pb fueron eliminadas por completo. Ahora, las líneas de las cuatro bases (A, T, C, G) corren paralelas, estables y balanceadas de forma uniforme en un valor cercano al 25% desde la primera base hasta el final de la lectura. 
 -	Calidad por base (Per base sequence quality): La calidad individual se mantiene en rangos de excelencia. Los puntajes Phred se estabilizan uniformemente en la zona verde (Q > 28), mostrando una mediana plana de Q44 a lo largo de casi toda la extensión de las lecturas, con una dispersión mínima en los percentiles inferiores que apenas roza Q40 en las últimas posiciones.
 -	Contenido de adaptadores (Adapter Content): El indicador cambió a un estado completamente limpio. El remanente de secuencias de vectores Illumina detectado en el extremo 3' de la corrida cruda fue removido al 100%.
-##### 3.2.3 Persistencia de Alertas y Anomalías Locales
+##### 3.2.3 Persistencia de Alertas y Anomalías Locales.
 A pesar de la optimización general, el reporte conserva llamadas de atención en dos módulos específicos que responden a características intrínsecas de la corrida física y de la muestra:
 -	Calidad por azulejo (Per tile sequence quality): Este indicador pasó de una alerta a un fallo. El mapa de calor revela manchas densas y localizadas en tonalidades verdes, amarillas y rojas (por ejemplo, en los azulejos de la serie 21202 y 21102 entre las posiciones 37 pb y 55 pb).
 -	Contenido de GC por secuencia (Per sequence GC content): La alerta persiste debido a que la distribución empírica de GC continúa mostrando un ligero ensanchamiento en el flanco izquierdo (bajas concentraciones de GC, entre el 30% y 40%) en comparación con el modelo teórico gaussiano. 
@@ -64,34 +64,34 @@ A pesar de la optimización general, el reporte conserva llamadas de atención e
 
 Tras el depurado de las lecturas crudas, los archivos emparejados procedentes del filtrado con Trimmomatic fueron sometidos a un ensamblaje de novo utilizando el pipeline bioinformático Shovill (v.1.1.0). Este flujo de trabajo automatizado está optimizado para aislamientos bacterianos y coordinó el proceso de estructuración del genoma mediante el motor principal SPAdes.
 
-##### 3.3.1 Parámetros de entrada y profundidad de secuenciación
+##### 3.3.1 Parámetros de entrada y profundidad de secuenciación.
 El sistema procesó un total de 2,174,830 lecturas individuales (lo que equivale exactamente a los 1,087,415 pares generados en el recorte previo). A partir de la densidad de nucleótidos viables (138.8 Mbp), el algoritmo estimó un tamaño del genoma de 5,000,000 pb (5.0 Mbp), una dimensión estructuralmente consistente con genomas bacterianos como el de Escherichia coli.
 Bajo estas métricas, se calculó una profundidad de secuenciación (cobertura) de 27.75X. Al encontrarse por debajo del límite de saturación predeterminado por el software (100X), el algoritmo retuvo y utilizó el 100% de las lecturas de alta calidad provistas, omitiendo procesos de submuestreo para maximizar la resolución del ensamblaje. 
 
-##### 3.3.2 Motor de ensamblaje (SPAdes) y optimización de K-mers
+##### 3.3.2 Motor de ensamblaje (SPAdes) y optimización de K-mers.
 La construcción del grafo de De Bruijn fue ejecutada por el núcleo de SPAdes. Para optimizar la resolución de regiones repetitivas y asegurar solapamientos precisos, el ensamblador evaluó iterativamente la topología de la secuencia utilizando un rango amplio y escalonado de tamaños de k-mers: 31, 55, 79, 103 y 127. 
 
-##### 3.3.3 Pulido de consenso y métricas finales
+##### 3.3.3 Pulido de consenso y métricas finales.
 Para garantizar la máxima fidelidad nucleotídica en el producto final, los contigs primarios generados por SPAdes fueron sometidos a una fase de pulido. El pipeline mapeó nuevamente las lecturas limpias contra los contigs crudos utilizando BWA-MEM, y posteriormente ejecutó Pilon para corregir micro-errores de consenso, tales como inserciones, deleciones aisladas y polimorfismos de un solo nucleótido (SNPs) generados durante la síntesis del ensamblador.
 El ensamblaje crudo produjo un total de 88 contigs primarios con una longitud total de 4,586,183 pb.
 
-#### 3.4	Calidad del Ensamblaje (Quast)
+#### 3.4	Calidad del Ensamblaje (Quast).
 Para evaluar cuantitativamente la contigüidad, completitud y calidad estructural del borrador genómico generado por Shovill, se empleó la herramienta QUAST (Quality Assessment Tool for Genome Assemblies). Los resultados indican que el ensamblaje es altamente contiguo y representativo del genoma esperado para Escherichia coli, careciendo de brechas (gaps) o bases indeterminadas.
 
-##### 3.4.1 Métricas Globales del Genoma
+##### 3.4.1 Métricas Globales del Genoma.
 El ensamblaje consolidó un total de 69 contigs, sumando una longitud genómica total de 4,586,183 pb (~4.58 Mbp). Esta extensión concuerda perfectamente con el tamaño del genoma de referencia biológico esperado para E. coli (típicamente entre 4.5 y 5.5 Mbp).
 El contenido de GC se fijó en 50.60%, un valor característico de esta especie, lo que corrobora que el ensamblaje no sufrió contaminación cruzada con genomas de perfiles nucleotídicos divergentes. Además, la métrica de bases indeterminadas (N's por cada 100 kbp) es de 0.00, demostrando que el algoritmo SPAdes resolvió satisfactoriamente las secuencias sin dejar vacíos o "gaps" internos en los contigs reportados.
-##### 3.4.2 Análisis de Contigüidad (Estadísticos N50 y L50)
+##### 3.4.2 Análisis de Contigüidad (Estadísticos N50 y L50).
 La robustez de un ensamblaje de novo basado en lecturas cortas (Illumina) se evalúa principalmente a través de la fragmentación del genoma. Los indicadores obtenidos reflejan un alto nivel de integridad estructural:
 -	Contig de mayor tamaño (Largest contig): El fragmento continuo más grande alcanzó los 421,689 pb, lo que significa que casi el 10% de todo el genoma bacteriano fue ensamblado en una única secuencia ininterrumpida.
 -	N50 y N75: El valor N50 es de 143,876 pb, lo que indica que el 50% de la extensión total del genoma está contenido en contigs de este tamaño o mayores. Asimismo, el N75 de 84,213 pb demuestra que incluso el 75% del genoma está empaquetado en fragmentos de gran tamaño.
 -	L50 y L75: El parámetro L50 es 11, revelando que se necesitan únicamente los 11 contigs más grandes para reconstruir la mitad del genoma. Para alcanzar el 75% del genoma (L75), solo se requieren 21 contigs.
-##### 3.4.3 Distribución de la Longitud Acumulada
+##### 3.4.3 Distribución de la Longitud Acumulada.
 El gráfico de longitud acumulada (Cumulative length) respalda visualmente la alta calidad del ensamblaje. La curva exhibe un ascenso marcadamente pronunciado en el eje Y (longitud) durante los primeros 20 a 30 contigs en el eje X, para luego aplanarse asintóticamente al acercarse a los 4.58 Mbp.
 
 #### 3.5	Anotacion Prokka.
 Una vez validada la integridad y contigüidad del ensamblaje genómico mediante QUAST, los 69 contigs resultantes (abarcando 4,586,183 pb) fueron sometidos a un proceso de anotación automatizada utilizando el pipeline Prokka. 
-##### 3.5.1 Estadísticas Globales de la Anotación
+##### 3.5.1 Estadísticas Globales de la Anotación.
 El reporte general generado por el software demuestra un perfil de anotación altamente coherente con la densidad génica esperada para el genoma de Escherichia coli. Se identificaron un total de 4,429 secuencias génicas, distribuidas de la siguiente manera:
 
 -	Secuencias Codificantes (CDS / mRNA): Se predijeron 4,337 secuencias codificantes de proteínas, lo que constituye la inmensa mayoría del catálogo genético y representa el repertorio metabólico y estructural del microorganismo.
@@ -99,7 +99,7 @@ El reporte general generado por el software demuestra un perfil de anotación al
 -	ARN Ribosomal (rRNA): Se identificaron 3 loci correspondientes a rRNAs, indicando que el ensamblaje logró capturar operones ribosomales, a pesar de que estas regiones repetitivas suelen ser complejas de resolver con tecnologías de lectura corta.
 -	ARN mensajero-transferencia (tmRNA): Se detectó 1 locus de tmRNA, esencial para rescatar ribosomas atascados durante la traducción.
 
-##### 3.5.2 Identificación de Elementos Funcionales Claves (Housekeeping Genes)
+##### 3.5.2 Identificación de Elementos Funcionales Claves (Housekeeping Genes).
 La evaluación cualitativa de las tablas de características (features) confirma que el proceso de ensamblaje y anotación conservó la estructura de operones vitales y genes de mantenimiento celular (housekeeping), sin evidencias de truncamientos críticos tempranos. 
 
 
