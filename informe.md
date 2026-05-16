@@ -259,23 +259,32 @@ Figura 15. Tabla de genes anotados en Prokka con información relacionada con la
 </p>
 
 ### 4. Discusión
-interpretación biológica (citar) 
-
-Los resultados obtenidos con QUAST permiten evaluar de forma más clara la calidad del ensamblaje genómico de Escherichia coli.En la figura 35 se presentan indicadores como el número de conting,la longitud total del ensamblaje,el N50,el L50 y el contenido de GC.Estas métricas son importantes porque ayudan a determinar si el genoma emsamblado es continuo,completo y confiable.QUAST y WebQUAST son herramientas usadas para evaluar ensamblajes genómicos mediante este tipo de parámetros (Mikheenko et al., 2023). En este caso el número de contigs indica que el genoma no quedó ensamblado como una sola secuencia completa,sino divido en varios fragmentos.Esto no significa necesariamente que el resultados sea incorrecto,ya que ensamblajes bacterianos obtenidos a partir de lecturas cortas es común encontrar un grado de fragmentación.Sin embargo,mientras menor sea el número de contigs y mayor sea el tamaño de los fragmentos, mejor será la continuidad del ensamblaje. El valor de N50 es un indicador importante,porque permite conocer la longitud de los principales contings del ensamblaje.Un N50 más alto indica que una parte considerable del genoma está representada por fragmentos grandes,lo cual es favorable para continuar con análisis de contigs y la longitud total se consideran métricas centrales para evaluar la calidad y continuidad del ensamblaje (Rojas-miranda et al., 2025).Respecto al contenido de GC,este parámetro ayudar a revisar si el ensamblaje mantiene coherencia biológica con el organismo estudiado.Un contenido GC cercano al esperado para E.coli sugiere que el ensamblaje es consistente y que no existen señales fuertes de errores en las secuencias ensambladas (Quality Check of a Genome Assembly Before Annotation, 2026) .
-La figura 36
-
-
-La anotación funcional obtenida mediante Prokka permitió identificar múltiles elementos genéticos relevantes en el ensamblaje de *Echerichia coli*, incluyendo aproximadamente 4.462 genes, 4.368 CDS, 83 tRNA, 16 rRNA y 1 tmRNA (Figura ***). Estos resultados son consistentes con genomas bacterianos previamente descritos para *E. coli*, los cuales suelen contener entre 4.000 y 5.000 genes codificantes distribuidos en genomas cercanos a 5 Mb (Batut et al., 2024). La presencia de genes codificantes, ARN ribosomal y ARN de transferencia demuestra que el ensamblaje obtenido conserva regiones funcionales esenciales relacionadas con metabolismo, síntesis proteica y regulación celular. Herramientas modernas de anotación como Prokka continúa siendo ampliamente utilizadas debido a su capacidad para integrar bases de datos bacterianas y generar anotaciones rápidas y reproducibles en genomas procariotas (Schwengers et al., 2021).
-
-La tabla de anotación mostrada en la figura *** evidencia la identificación de genes asociados con proteínas de membrana, trasnporte de aminoácidos y funciones metabólicas específicas, como metN, metQ, nlpE, nlpE y arfB. Estas funciones son biológicamente relevantes debido a que participan en transporte molecular, respuestas celular y mantenimiento fisiolófico bacteriano. La detección de proteínas hipotéticcas también es común en ensamblajes bacterianos y refleja regiones cuya función aún no ha sido completamente caracterizada experimentalmente (Lobb et al., 2020). En conjunto, los resultados indican que el ensamblaje generado posee suficiente calidad estructural y funcional para estudios posteriores de genómica comparativa, análisis funcional y caracterización de *E. coli*.
+<p align="justify">
+Los resultados obtenidos con QUAST permiten evaluar de forma más clara la calidad del ensamblaje genómico de Escherichia coli. En la figura 12 se presentan indicadores como el número de conting, la longitud total del ensamblaje, el N50, el L50 y el contenido de GC. Estas métricas son importantes porque ayudan a determinar si el genoma emsamblado es continuo,completo y confiable. QUAST y WebQUAST son herramientas usadas para evaluar ensamblajes genómicos mediante este tipo de parámetros (Mikheenko et al., 2023).  
+</p>
+<p align="justify">
+En este caso el número de contigs indica que el genoma no quedó ensamblado como una sola secuencia completa, sino divido en varios fragmentos. Esto no significa necesariamente que el resultados sea incorrecto, ya que ensamblajes bacterianos obtenidos a partir de lecturas cortas es común encontrar un grado de fragmentación. Sin embargo, mientras menor sea el número de contigs y mayor sea el tamaño de los fragmentos, mejor será la continuidad del ensamblaje. El valor de N50 es un indicador importante, porque permite conocer la longitud de los principales contings del ensamblaje. Un N50 más alto indica que una parte considerable del genoma está representada por fragmentos grandes,lo cual es favorable para continuar con análisis de contigs y la longitud total se consideran métricas centrales para evaluar la calidad y continuidad del ensamblaje (Rojas-miranda et al., 2025).
+</p>
+<p align="justify">
+Respecto al contenido de GC, este parámetro ayuda a revisar si el ensamblaje mantiene coherencia biológica con el organismo estudiado. Un contenido GC cercano al esperado para E.coli sugiere que el ensamblaje es consistente y que no existen señales fuertes de errores en las secuencias ensambladas (Quality Check of a Genome Assembly Before Annotation, 2026).
+</p>
+<p align="justify">
+La anotación funcional obtenida mediante Prokka permitió identificar múltiles elementos genéticos relevantes en el ensamblaje de *Echerichia coli*, incluyendo aproximadamente 4.462 genes, 4.368 CDS, 83 tRNA, 16 rRNA y 1 tmRNA (Figura 14). Estos resultados son consistentes con genomas bacterianos previamente descritos para *E. coli*, los cuales suelen contener entre 4.000 y 5.000 genes codificantes distribuidos en genomas cercanos a 5 Mb (Batut et al., 2024). La presencia de genes codificantes, ARN ribosomal y ARN de transferencia demuestra que el ensamblaje obtenido conserva regiones funcionales esenciales relacionadas con metabolismo, síntesis proteica y regulación celular. Herramientas modernas de anotación como Prokka continúa siendo ampliamente utilizadas debido a su capacidad para integrar bases de datos bacterianas y generar anotaciones rápidas y reproducibles en genomas procariotas (Schwengers et al., 2021).
+</p>
+<p align="justify">
+La tabla de anotación mostrada en la figura 15 evidencia la identificación de genes asociados con proteínas de membrana, trasnporte de aminoácidos y funciones metabólicas específicas, como metN, metQ, nlpE, nlpE y arfB. Estas funciones son biológicamente relevantes debido a que participan en transporte molecular, respuestas celular y mantenimiento fisiolófico bacteriano. La detección de proteínas hipotéticcas también es común en ensamblajes bacterianos y refleja regiones cuya función aún no ha sido completamente caracterizada experimentalmente (Lobb et al., 2020). En conjunto, los resultados indican que el ensamblaje generado posee suficiente calidad estructural y funcional para estudios posteriores de genómica comparativa, análisis funcional y caracterización de *E. coli*.
+</p>
 
 ### 5. Conclusiones 
+<p align="justify">
+La implementación del flujo de trabajo automatizado Shovill, soportado por el motor iterativo multi-k-mer de SPAdes y refinado mediante algoritmos de pulido de consenso (BWA-MEM y Pilon), demostró ser una estrategia bioinformática altamente eficiente para la reconstrucción genómica. A pesar de contar con una profundidad de secuenciación moderada (27.75X), el sistema logró sintetizar con éxito las lecturas en un genoma borrador de alta fidelidad, minimizando la fragmentación a solo 88 contigs y consolidando un tamaño total (4.58 Mbp) completamente el perfil biológico de Escherichia coli.
+</p>
 
-
+<p align="justify">
 La anotación realizada con Prokka permitió identificar correctamente genes codificantes y elementos funcionales esenciales del genoma de *E. coli*, demostrando que el ensamblaje obtenido es biológicamente interpretabla y adecuado para futuros análisis genómicos y funcionales.
+</p>
 
 ### 6. Referencias bibliográficas  
-Genere un grupo en Mendeley con sus compañeros de proyecto. Coloque todas sus fuentes y los respectivos PDFs de cada una 
 
 
 Batut, B., et al. (2024). Assembly of metagenomic sequencing data. Galaxy Training Network. https://training.galaxyproject.org/training-material/topics/assembly/tutorials/metagenomics-assembly/tutorial.html
@@ -288,7 +297,3 @@ Schwengers, O., Jelonek, L., Dieckmann, M. A., Beyvers, S., Blom, J., & Goesmann
 
 Yibar, A., et al. (2024). First report and genomic characterization of Escherichia coli O111 from cattle. BMC Genomics, 25, 10945. https://doi.org/10.1186/s12864-024-10945-4
 
-
-
-## NOTA
-:eyes: Deberá invitarme a su grupo en Mendeley o las plataformas usadas al correo bioupsmantigua@gmail.comhola
