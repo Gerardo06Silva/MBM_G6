@@ -50,6 +50,7 @@ Finalmente, se obtuvo un genoma de E. coli ensamblado, evaluado y anotado.
 <br>
   Figura 1. Diagrama de flujo para el ensamblaje de secuencia de E. Coli.
 </p>
+(Seemann, 2014).
 
 ### 3. Resultados
 
@@ -325,6 +326,9 @@ Yibar, A., et al. (2024). First report and genomic characterization of Escherich
 Bankevich, A., Nurk, S., Antipov, D., Gurevich, A. A., Dvorkin, M., Kulikov, A. S., ... & Pevzner, P. A. (2012). SPAdes: a new genome assembly algorithm and its applications to single-cell sequencing. Journal of Computational Biology, 19(5), 455-477.
 
 Sims, D., Sudbery, I., Ilott, N. E., Heger, A., & Ponting, C. P. (2014). Sequencing depth and coverage: key considerations in genomic analyses. Nature Reviews Genetics, 15(2), 121-132.
+
+https://itrop.pages.ird.fr/trainings/training_genome_annotation/pages/annotation/qc_pre/?utm_source
+Seemann, T. (2014). RProkka:rapid prokaryotic genome annotation. Bioinformatics, 2068–2069.
 
 
 
