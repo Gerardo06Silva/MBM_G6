@@ -43,7 +43,7 @@ Después del ensamblaje, se evaluó su calidad utilizando QUAST. En esta fase se
 <p align="justify">
 Si el ensamblaje no cumplía con los criterios esperados, se regresaba a revisar la calidad de las lecturas, los parámetros de limpieza y las condiciones del ensamblaje.  Cuando el ensamblaje fue considerado aceptable, se realizó la anotación del genoma utilizando Prokka. Esta herramienta permitió identificar los principales elementos genéticos presentes en el genoma ensamblado, como regiones codificantes, genes, CDS, RNA y tRNA.  
 </p>
-Finalmente, se obtuvo un genoma de <i>E. coli</i> ensamblado, evaluado y anotado.  
+Finalmente, se obtuvo un genoma de <i>E. coli</i> ensamblado, evaluado y anotado. (Seemann, 2014).  
 <br>
 <p align="center">
 <img width="297" height="419" alt="image" src="https://github.com/user-attachments/assets/67ca0129-4e5b-4a8c-b789-fdaa4345e742" />
@@ -326,6 +326,9 @@ Yibar, A., et al. (2024). First report and genomic characterization of Escherich
 Bankevich, A., Nurk, S., Antipov, D., Gurevich, A. A., Dvorkin, M., Kulikov, A. S., ... & Pevzner, P. A. (2012). SPAdes: a new genome assembly algorithm and its applications to single-cell sequencing. Journal of Computational Biology, 19(5), 455-477.
 
 Sims, D., Sudbery, I., Ilott, N. E., Heger, A., & Ponting, C. P. (2014). Sequencing depth and coverage: key considerations in genomic analyses. Nature Reviews Genetics, 15(2), 121-132.
+
+https://itrop.pages.ird.fr/trainings/training_genome_annotation/pages/annotation/qc_pre/?utm_source
+Seemann, T. (2014). RProkka:rapid prokaryotic genome annotation. Bioinformatics, 2068–2069.
 
 
 
