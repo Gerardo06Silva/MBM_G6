@@ -1,4 +1,4 @@
-#ANEXOS: CAPTURAS DE PANTALLA DE RESULTADOS OBTENIDOS  
+# ANEXOS: CAPTURAS DE PANTALLA DE RESULTADOS OBTENIDOS  
 ## 1. Descarga de secuencia  
 ### 1.1 Forward  
 <img width="350" height="290" alt="image" src="https://github.com/user-attachments/assets/7c2d89e0-34a6-4009-a477-63f64f27ad5f" />  
