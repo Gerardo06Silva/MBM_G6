@@ -49,8 +49,7 @@ Finalmente, se obtuvo un genoma de E. coli ensamblado, evaluado y anotado.
 <img width="297" height="419" alt="image" src="https://github.com/user-attachments/assets/67ca0129-4e5b-4a8c-b789-fdaa4345e742" />
 <br>
   Figura 1. Diagrama de flujo para el ensamblaje de secuencia de E. Coli.
-</p>
-(Seemann, 2014).
+</p> (Seemann, 2014).
 
 ### 3. Resultados
 
