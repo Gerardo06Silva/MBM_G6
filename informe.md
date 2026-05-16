@@ -301,7 +301,9 @@ La implementación del flujo de trabajo automatizado Shovill, soportado por el m
 <p align="justify">
 La anotación realizada con Prokka permitió identificar correctamente genes codificantes y elementos funcionales esenciales del genoma de *E. coli*, demostrando que el ensamblaje obtenido es biológicamente interpretabla y adecuado para futuros análisis genómicos y funcionales.
 </p>
-
+<p align="justify">
+  La evaluación realizada con QUAST ayudó a comprobar que, aunque el genoma no quedó unido en una sola secuencia completa, los resultados obtenidos muestran una buena calidad del ensamblaje. Los valores de N50, L50 y la curva acumulada de contigs indican que gran parte del genoma fue reconstruida en fragmentos amplios y ordenados. En este sentido, el flujo de trabajo bioinformático aplicado fue adecuado, ya que permitió procesar las lecturas FASTQ, limpiar los datos, ensamblarlos y obtener información genómica importante de *Escherichia coli*.
+</p>
 
 ### 7. Referencias bibliográficas  
 
