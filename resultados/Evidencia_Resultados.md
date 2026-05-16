@@ -182,5 +182,5 @@ Figura 38. Anotación funcional de regiones genómicas
 
 <img width="350" height="280" alt="image" src="https://github.com/user-attachments/assets/54a324d4-c25d-4b9e-bb89-9488e2ff39fb" />
 
-Figura 41. Resultados finales de la anotación genómica realizados en Prokka.
+Figura 39. Resultados finales de la anotación genómica realizados en Prokka.
 
