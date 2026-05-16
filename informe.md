@@ -1,4 +1,4 @@
-# Proyecto: Análisis de calidad, ensamblaje y caracterización genómica de Escherichia coli a partir de secuencias FASTQ  
+# Proyecto: Análisis de calidad, ensamblaje y caracterización genómica de <i>Escherichia coli</i> a partir de secuencias FASTQ  
 
 ## Integrantes
 - Gerardo Silva
@@ -8,19 +8,19 @@
 ## Objetivo
 
 <p align="justify">
-Procesar lecturas FASTQ de Escherichia coli mediante control de calidad, depuración y ensamblaje de novo, con el fin de obtener una secuencia genómica evaluable e identificar parámetros relevantes como longitud del ensamblaje, contenido GC, cobertura y posibles regiones codificantes.
+Procesar lecturas FASTQ de <i>Escherichia coli</i> mediante control de calidad, depuración y ensamblaje de novo, con el fin de obtener una secuencia genómica evaluable e identificar parámetros relevantes como longitud del ensamblaje, contenido GC, cobertura y posibles regiones codificantes.
 </p>
 
 ### 1. Introducción
 
 <p align="justify">
-Echerichia coli es uno de los microorganismos modelo más utilizados en biología molecular, microbiología y bioinformática debido a que posee un genoma relativamente pequeño, ampliamente caracterizado y disponible en múltiples bases de datos genómicas públicas. Además de su importancia como organismo modelo, algunas cepas de E. coli tienen relevancia clínica y biotecnológica, ya que pueden participar en procesos industriales, producción de proteínas recombinantes y estudios relacionados con resistencia antimicrobiana y evolución bacteriana (Yibar et al., 2024).
+<i>Echerichia coli</i> es uno de los microorganismos modelo más utilizados en biología molecular, microbiología y bioinformática debido a que posee un genoma relativamente pequeño, ampliamente caracterizado y disponible en múltiples bases de datos genómicas públicas. Además de su importancia como organismo modelo, algunas cepas de <i>E. coli</i> tienen relevancia clínica y biotecnológica, ya que pueden participar en procesos industriales, producción de proteínas recombinantes y estudios relacionados con resistencia antimicrobiana y evolución bacteriana (Yibar et al., 2024).
 </p>
 <p align="justify">
 El desarrollo de tecnologías de secuenciación masiva ha permitido generar grandes volúmenes de datos genómicos bacterianos en formatos como FASTQ, facilitantdo el análisis bioinformático de genomas completos mediante flujos de trabajo de ensamblaje y anotación en plataformas reproducibles como Galaxy (Batut et al., 2024). Actualmente, herramientas como FastQC, Trimmomatic, SPAdes, QUAST y Prokka son ampliamente utilizadas para evaluar calidad de lecturas, ensamblar genomas de novo y caracterizar regiones funcionales bacterianas. Estas herramientas permiten obtener métricas importantes como contenido GC, número de contigs, continuidad del ensamblaje y predicción de genes codificantes (Batut et al., 2024; Galaxy Training Network, 2024).
 </p>
 <p align="justify">
-En este proyecto se trabajó con secuencias WGS (Whole Genome Sequencing) de Echerichia coli obtenidas desde el repositorio SRA del NCBI, específicamente el dataset SRR38439492. El objetivo fue procesar lecturas FASTQ mediante control de calidad, depuración y ensamblaje de novo, con el fin de obtener un ensamblaje genómico evaluable e identificar parámetros relevantes como longitud del ensamblaje, cobertura y regiones potencialmente codificantes. Este tipo de análisis constituye una base fundamental para estudios de genómica comparativa, evolución bacteriana y caracterización funcional de microorganismos procariotas (Schwengers et al., 2021).
+En este proyecto se trabajó con secuencias WGS (Whole Genome Sequencing) de <i>Echerichia coli</i> obtenidas desde el repositorio SRA del NCBI, específicamente el dataset SRR38439492. El objetivo fue procesar lecturas FASTQ mediante control de calidad, depuración y ensamblaje de novo, con el fin de obtener un ensamblaje genómico evaluable e identificar parámetros relevantes como longitud del ensamblaje, cobertura y regiones potencialmente codificantes. Este tipo de análisis constituye una base fundamental para estudios de genómica comparativa, evolución bacteriana y caracterización funcional de microorganismos procariotas (Schwengers et al., 2021).
 </p>
 
 ### 2. Metodología 
@@ -35,7 +35,7 @@ Posteriormente, se realizó un control de calidad inicial utilizando FastQC. Se 
 Cuando las lecturas no cumplían completamente con los criterios de calidad, se aplicó un proceso de limpieza y filtrado usando herramientas como Trimmomatic y fastp. Este paso permitió eliminar fragmentos de baja calidad, adaptadores y secuencias muy cortas que podrían afectar los resultados posteriores. Como resultado, se obtuvieron lecturas más limpias y confiables para el ensamblaje del genoma.  
 </p>
 <p align="justify">
-Una vez obtenidas las lecturas limpias, se procedió al ensamblaje del genoma mediante la herramienta Shovill. Esta etapa consistió en unir las lecturas que compartían regiones similares para formar secuencias más largas llamadas contigs. Estos contigs representan fragmentos reconstruidos del genoma de E. coli y constituyen la base para los análisis siguientes.  
+Una vez obtenidas las lecturas limpias, se procedió al ensamblaje del genoma mediante la herramienta Shovill. Esta etapa consistió en unir las lecturas que compartían regiones similares para formar secuencias más largas llamadas contigs. Estos contigs representan fragmentos reconstruidos del genoma de <i>E. coli</i> y constituyen la base para los análisis siguientes.  
 </p>
 <p align="justify">
 Después del ensamblaje, se evaluó su calidad utilizando QUAST. En esta fase se analizaron métricas como el valor N50, la longitud total del ensamblaje, el número de contigs y el porcentaje de GC. Estos indicadores permitieron determinar si el ensamblaje era adecuado y si los resultados obtenidos eran coherentes con lo esperado para un genoma bacteriano.  
@@ -43,12 +43,12 @@ Después del ensamblaje, se evaluó su calidad utilizando QUAST. En esta fase se
 <p align="justify">
 Si el ensamblaje no cumplía con los criterios esperados, se regresaba a revisar la calidad de las lecturas, los parámetros de limpieza y las condiciones del ensamblaje.  Cuando el ensamblaje fue considerado aceptable, se realizó la anotación del genoma utilizando Prokka. Esta herramienta permitió identificar los principales elementos genéticos presentes en el genoma ensamblado, como regiones codificantes, genes, CDS, RNA y tRNA.  
 </p>
-Finalmente, se obtuvo un genoma de E. coli ensamblado, evaluado y anotado.  
+Finalmente, se obtuvo un genoma de <i>E. coli</i> ensamblado, evaluado y anotado.  
 <br>
 <p align="center">
 <img width="297" height="419" alt="image" src="https://github.com/user-attachments/assets/67ca0129-4e5b-4a8c-b789-fdaa4345e742" />
 <br>
-  Figura 1. Diagrama de flujo para el ensamblaje de secuencia de E. Coli.
+  Figura 1. Diagrama de flujo para el ensamblaje de secuencia de <i>E. Coli</i>.
 </p>
 
 ### 3. Resultados
@@ -84,6 +84,7 @@ Figura 3.  Gráfico de la calidad de Secuencias por Base, secuencia Forward.
 ##### 3.1.3 Análisis de Alertas y Fallos.
 <p align="justify">
 A pesar de la robustez general en la precisión de las bases individuales, el reporte arrojó llamadas de atención en los siguientes módulos:
+  <br>
 - Calidad por celda (Per tile sequence quality): El mapa de calor azul revela algunas trazas discretas en tonos verdes/amarillos aislados (por ejemplo, cerca de la posición 60-64 pb en canales específicos de celdas de flujo).
 </p>
 
@@ -175,7 +176,7 @@ Tras el depurado de las lecturas crudas, los archivos emparejados procedentes de
 
 ##### 3.3.1 Parámetros de entrada y profundidad de secuenciación.
 <p align="justify">
-El sistema procesó un total de 2,174,830 lecturas individuales (lo que equivale exactamente a los 1,087,415 pares generados en el recorte previo). A partir de la densidad de nucleótidos viables (138.8 Mbp), el algoritmo estimó un tamaño del genoma de 5,000,000 pb (5.0 Mbp), una dimensión estructuralmente consistente con genomas bacterianos como el de Escherichia coli.
+El sistema procesó un total de 2,174,830 lecturas individuales (lo que equivale exactamente a los 1,087,415 pares generados en el recorte previo). A partir de la densidad de nucleótidos viables (138.8 Mbp), el algoritmo estimó un tamaño del genoma de 5,000,000 pb (5.0 Mbp), una dimensión estructuralmente consistente con genomas bacterianos como el de <i>Escherichia coli</i>.
 Bajo estas métricas, se calculó una profundidad de secuenciación (cobertura) de 27.75X. Al encontrarse por debajo del límite de saturación predeterminado por el software (100X), el algoritmo retuvo y utilizó el 100% de las lecturas de alta calidad provistas, omitiendo procesos de submuestreo para maximizar la resolución del ensamblaje. 
 </p>
 
@@ -192,7 +193,7 @@ El ensamblaje crudo produjo un total de 88 contigs primarios con una longitud to
 
 #### 3.4	Calidad del Ensamblaje (Quast).
 <p align="justify">
-Para evaluar cuantitativamente la contigüidad, completitud y calidad estructural del borrador genómico generado por Shovill, se empleó la herramienta QUAST (Quality Assessment Tool for Genome Assemblies). Los resultados indican que el ensamblaje es altamente contiguo y representativo del genoma esperado para Escherichia coli, careciendo de brechas (gaps) o bases indeterminadas.
+Para evaluar cuantitativamente la contigüidad, completitud y calidad estructural del borrador genómico generado por Shovill, se empleó la herramienta QUAST (Quality Assessment Tool for Genome Assemblies). Los resultados indican que el ensamblaje es altamente contiguo y representativo del genoma esperado para <i>Escherichia coli</i>, careciendo de brechas (gaps) o bases indeterminadas.
 </p>
 
 <p align="center">
@@ -239,7 +240,7 @@ Figura 14. Resumen generado por Prokka, donde se identifican genes, CDS, rRNA, t
 
 ##### 3.5.1 Estadísticas Globales de la Anotación.
 <p align="justify">
-El reporte general generado por el software demuestra un perfil de anotación altamente coherente con la densidad génica esperada para el genoma de Escherichia coli. Se identificaron un total de 4,429 secuencias génicas, distribuidas de la siguiente manera:
+El reporte general generado por el software demuestra un perfil de anotación altamente coherente con la densidad génica esperada para el genoma de <i>Escherichia coli</i>. Se identificaron un total de 4,429 secuencias génicas, distribuidas de la siguiente manera:
 </p>
 <p align="justify">
 -	Secuencias Codificantes (CDS / mRNA): Se predijeron 4,337 secuencias codificantes de proteínas, lo que constituye la inmensa mayoría del catálogo genético y representa el repertorio metabólico y estructural del microorganismo.
@@ -266,40 +267,40 @@ El ensamblaje de novo de genomas bacterianos a partir de secuencias de lectura c
 El éxito del ensamblaje se sustenta directamente en la arquitectura del motor SPAdes, el cual supera las limitaciones tradicionales de los grafos de De Bruijn al implementar un enfoque iterativo multi-k-mer (Bankevich et al., 2012). La utilización escalonada de k-mers desde 31 hasta 127 permitió un balance algorítmico ideal: los k-mers más pequeños garantizaron el anclaje de lecturas en zonas de baja cobertura o con ligeras variaciones, mientras que los k-mers más largos (como 103 y 127) fueron esenciales para trazar puentes efectivos a través de secuencias repetitivas, como los operones ribosomales. Esta heurística es la responsable directa de haber colapsado la red del grafo en únicamente 88 contigs primarios.
 </p>
 <p align="justify">
-Los resultados obtenidos con QUAST permiten evaluar de forma más clara la calidad del ensamblaje genómico de Escherichia coli. En la figura 12 se presentan indicadores como el número de conting, la longitud total del ensamblaje, el N50, el L50 y el contenido de GC. Estas métricas son importantes porque ayudan a determinar si el genoma emsamblado es continuo,completo y confiable. QUAST y WebQUAST son herramientas usadas para evaluar ensamblajes genómicos mediante este tipo de parámetros (Mikheenko et al., 2023).  
+Los resultados obtenidos con QUAST permiten evaluar de forma más clara la calidad del ensamblaje genómico de <i>Escherichia coli</i>. En la figura 12 se presentan indicadores como el número de conting, la longitud total del ensamblaje, el N50, el L50 y el contenido de GC. Estas métricas son importantes porque ayudan a determinar si el genoma emsamblado es continuo,completo y confiable. QUAST y WebQUAST son herramientas usadas para evaluar ensamblajes genómicos mediante este tipo de parámetros (Mikheenko et al., 2023).  
 </p>
 <p align="justify">
 En este caso el número de contigs indica que el genoma no quedó ensamblado como una sola secuencia completa, sino divido en varios fragmentos. Esto no significa necesariamente que el resultados sea incorrecto, ya que ensamblajes bacterianos obtenidos a partir de lecturas cortas es común encontrar un grado de fragmentación. Sin embargo, mientras menor sea el número de contigs y mayor sea el tamaño de los fragmentos, mejor será la continuidad del ensamblaje. El valor de N50 es un indicador importante, porque permite conocer la longitud de los principales contings del ensamblaje. Un N50 más alto indica que una parte considerable del genoma está representada por fragmentos grandes,lo cual es favorable para continuar con análisis de contigs y la longitud total se consideran métricas centrales para evaluar la calidad y continuidad del ensamblaje (Rojas-miranda et al., 2025).
 </p>
 <p align="justify">
-Respecto al contenido de GC, este parámetro ayuda a revisar si el ensamblaje mantiene coherencia biológica con el organismo estudiado. Un contenido GC cercano al esperado para E.coli sugiere que el ensamblaje es consistente y que no existen señales fuertes de errores en las secuencias ensambladas (Quality Check of a Genome Assembly Before Annotation, 2026).
+Respecto al contenido de GC, este parámetro ayuda a revisar si el ensamblaje mantiene coherencia biológica con el organismo estudiado. Un contenido GC cercano al esperado para <i>E.coli</i>i> sugiere que el ensamblaje es consistente y que no existen señales fuertes de errores en las secuencias ensambladas (Quality Check of a Genome Assembly Before Annotation, 2026).
 </p>
 <p align="justify">
-La anotación funcional obtenida mediante Prokka permitió identificar múltiles elementos genéticos relevantes en el ensamblaje de *Echerichia coli*, incluyendo aproximadamente 4.462 genes, 4.368 CDS, 83 tRNA, 16 rRNA y 1 tmRNA (Figura 14). Estos resultados son consistentes con genomas bacterianos previamente descritos para *E. coli*, los cuales suelen contener entre 4.000 y 5.000 genes codificantes distribuidos en genomas cercanos a 5 Mb (Batut et al., 2024). La presencia de genes codificantes, ARN ribosomal y ARN de transferencia demuestra que el ensamblaje obtenido conserva regiones funcionales esenciales relacionadas con metabolismo, síntesis proteica y regulación celular. Herramientas modernas de anotación como Prokka continúa siendo ampliamente utilizadas debido a su capacidad para integrar bases de datos bacterianas y generar anotaciones rápidas y reproducibles en genomas procariotas (Schwengers et al., 2021).
+La anotación funcional obtenida mediante Prokka permitió identificar múltiles elementos genéticos relevantes en el ensamblaje de <i>Echerichia coli</i>, incluyendo aproximadamente 4.462 genes, 4.368 CDS, 83 tRNA, 16 rRNA y 1 tmRNA (Figura 14). Estos resultados son consistentes con genomas bacterianos previamente descritos para <i>E. coli</i>, los cuales suelen contener entre 4.000 y 5.000 genes codificantes distribuidos en genomas cercanos a 5 Mb (Batut et al., 2024). La presencia de genes codificantes, ARN ribosomal y ARN de transferencia demuestra que el ensamblaje obtenido conserva regiones funcionales esenciales relacionadas con metabolismo, síntesis proteica y regulación celular. Herramientas modernas de anotación como Prokka continúa siendo ampliamente utilizadas debido a su capacidad para integrar bases de datos bacterianas y generar anotaciones rápidas y reproducibles en genomas procariotas (Schwengers et al., 2021).
 </p>
 <p align="justify">
-La tabla de anotación mostrada en la figura 15 evidencia la identificación de genes asociados con proteínas de membrana, trasnporte de aminoácidos y funciones metabólicas específicas, como metN, metQ, nlpE, nlpE y arfB. Estas funciones son biológicamente relevantes debido a que participan en transporte molecular, respuestas celular y mantenimiento fisiolófico bacteriano. La detección de proteínas hipotéticcas también es común en ensamblajes bacterianos y refleja regiones cuya función aún no ha sido completamente caracterizada experimentalmente (Lobb et al., 2020). En conjunto, los resultados indican que el ensamblaje generado posee suficiente calidad estructural y funcional para estudios posteriores de genómica comparativa, análisis funcional y caracterización de *E. coli*.
+La tabla de anotación mostrada en la figura 15 evidencia la identificación de genes asociados con proteínas de membrana, trasnporte de aminoácidos y funciones metabólicas específicas, como metN, metQ, nlpE, nlpE y arfB. Estas funciones son biológicamente relevantes debido a que participan en transporte molecular, respuestas celular y mantenimiento fisiolófico bacteriano. La detección de proteínas hipotéticcas también es común en ensamblajes bacterianos y refleja regiones cuya función aún no ha sido completamente caracterizada experimentalmente (Lobb et al., 2020). En conjunto, los resultados indican que el ensamblaje generado posee suficiente calidad estructural y funcional para estudios posteriores de genómica comparativa, análisis funcional y caracterización de <i>E. coli</i>.
 </p>
 
 ### 5. Aplicaciones 
 
 ### 5.1 Vigilancia epidemiológica y salud pública
 <p align="justify">
-Los resultados obtenidos mediante el ensamblaje con Shovill, la evaluación con QUAST y la anotación funcional con Prokka permiten aplicar herramientas de genómica bacteriana en vigilancia epidemiológica en *Escherichia coli*. La identificación de genes codificantes, regiones funcionales y métricas de calidad del ensamblaje facilita la comparación entre cepas bacterianas y la detección de posibles factores asociados con virulencia o resistencia antimicrobiana. Este tipo de análisis ha sido ampliamente utiliado en el monitoreo de cepas patógenas de *E. coli* involucradas en brotes alimentarios y contaminación ambiental, permitiendo establecer relaciones filogenéticas, identificar genes de resistencia antimicrobiana y rastrear fuentes de infección mediante secuenciación genómica completa (Feldgarden et al., 2021; Schwengers et al., 2021).
+Los resultados obtenidos mediante el ensamblaje con Shovill, la evaluación con QUAST y la anotación funcional con Prokka permiten aplicar herramientas de genómica bacteriana en vigilancia epidemiológica en <i>Escherichia coli</i>. La identificación de genes codificantes, regiones funcionales y métricas de calidad del ensamblaje facilita la comparación entre cepas bacterianas y la detección de posibles factores asociados con virulencia o resistencia antimicrobiana. Este tipo de análisis ha sido ampliamente utiliado en el monitoreo de cepas patógenas de <i>E. coli</i> involucradas en brotes alimentarios y contaminación ambiental, permitiendo establecer relaciones filogenéticas, identificar genes de resistencia antimicrobiana y rastrear fuentes de infección mediante secuenciación genómica completa (Feldgarden et al., 2021; Schwengers et al., 2021).
 </p>
 
 ### 5.2 Biotecnología y producción de proteínas recombinantes
 <p align="justify">
-La información obtenida en este proyecto también tiene aplicación en biotecnología e ingeniería genética, debido a que *Escherichia coli* continúa siendo uno de los principales microorganismos utilizados para producción de proteínas recombinantes y estudios metabólicos. La anotación funcional obtenida mediante Prokka permitió identificar genes asociados con transporte molecular, metabolismo y síntesis proteica, lo cual constituye una base importante para futuras aplicaciones en biología sintética y optimización bacteriana. Actualmente, el análisis genómico y funcional de cepas de *E. coli* es utilizado en el desarrollo de microorganismos destinados a la producción de insulina recombinante, enzimas industriales y compuestos de interés biomédico (Batut et al., 2024; Lobb et al., 2020).
+La información obtenida en este proyecto también tiene aplicación en biotecnología e ingeniería genética, debido a que <i>Escherichia coli</i> continúa siendo uno de los principales microorganismos utilizados para producción de proteínas recombinantes y estudios metabólicos. La anotación funcional obtenida mediante Prokka permitió identificar genes asociados con transporte molecular, metabolismo y síntesis proteica, lo cual constituye una base importante para futuras aplicaciones en biología sintética y optimización bacteriana. Actualmente, el análisis genómico y funcional de cepas de <i>E. coli</i> es utilizado en el desarrollo de microorganismos destinados a la producción de insulina recombinante, enzimas industriales y compuestos de interés biomédico (Batut et al., 2024; Lobb et al., 2020).
 </p>
 
 ### 6. Conclusiones 
 <p align="justify">
-La implementación del flujo de trabajo automatizado Shovill, soportado por el motor iterativo multi-k-mer de SPAdes y refinado mediante algoritmos de pulido de consenso (BWA-MEM y Pilon), demostró ser una estrategia bioinformática altamente eficiente para la reconstrucción genómica. A pesar de contar con una profundidad de secuenciación moderada (27.75X), el sistema logró sintetizar con éxito las lecturas en un genoma borrador de alta fidelidad, minimizando la fragmentación a solo 88 contigs y consolidando un tamaño total (4.58 Mbp) completamente el perfil biológico de Escherichia coli.
+La implementación del flujo de trabajo automatizado Shovill, soportado por el motor iterativo multi-k-mer de SPAdes y refinado mediante algoritmos de pulido de consenso (BWA-MEM y Pilon), demostró ser una estrategia bioinformática altamente eficiente para la reconstrucción genómica. A pesar de contar con una profundidad de secuenciación moderada (27.75X), el sistema logró sintetizar con éxito las lecturas en un genoma borrador de alta fidelidad, minimizando la fragmentación a solo 88 contigs y consolidando un tamaño total (4.58 Mbp) completamente el perfil biológico de <i>Escherichia coli</i>.
 </p>
 
 <p align="justify">
-La anotación realizada con Prokka permitió identificar correctamente genes codificantes y elementos funcionales esenciales del genoma de *E. coli*, demostrando que el ensamblaje obtenido es biológicamente interpretabla y adecuado para futuros análisis genómicos y funcionales.
+La anotación realizada con Prokka permitió identificar correctamente genes codificantes y elementos funcionales esenciales del genoma de <i>E. coli</i>, demostrando que el ensamblaje obtenido es biológicamente interpretabla y adecuado para futuros análisis genómicos y funcionales.
 </p>
 
 
