@@ -58,7 +58,14 @@ Finalmente, se obtuvo un genoma de E. coli ensamblado, evaluado y anotado.
 Para evaluar la viabilidad de los datos de secuenciación obtenidos para el archivo de la secuencia cruda, se realizó un control de calidad inicial utilizando la herramienta FastQC. Los resultados muestran un perfil general de alta calidad, idóneo para procesos posteriores de ensamblaje o alineamiento, aunque se identificaron anomalías menores en la composición de las bases al inicio de las lecturas.
 </p>
 
-##### 3.1.1 Estadísticas Básicas de la Corrida
+##### 3.1.1 Estadísticas Básicas de FastQC
+
+<p align="center">
+<img width="350" height="280" alt="image" src="https://github.com/user-attachments/assets/cc0eb8fc-2d7b-45e7-aedb-0fa7bb4715c4" />
+<br>
+  Figura 2. Resumen del reporte FastQC secuencia Forward 
+</p>
+
 <p align="justify">
 El archivo analizado contiene un total de 1,106,152 secuencias (lecturas individuales), con una longitud uniforme de 150 pb por lectura, sumando un total de 165.9 Mbp. No se registraron secuencias marcadas como de baja calidad por el secuenciador. El contenido global de GC es del 50%, un valor balanceado y esperado para este tipo de genotecas de secuenciación masiva.
 </p>
@@ -66,20 +73,52 @@ El archivo analizado contiene un total de 1,106,152 secuencias (lecturas individ
 ##### 3.1.2 Análisis de Indicadores Exitosos.
 <p align="justify">
 - Calidad por base (Per base sequence quality): Este indicador muestra un comportamiento óptimo. Los puntajes de calidad Phred se mantienen consistentemente en la zona verde del gráfico (Q > 28) a lo largo de toda la extensión de los 150 pb. Al inicio, la mediana se sitúa en Q38 y asciende rápidamente hasta estabilizarse en Q44 en el cuerpo de la lectura, decayendo sutilmente a Q42 hacia el extremo 3'. Esto indica una probabilidad de error de llamada de bases extremadamente baja (menor al 0.01%).
--Distribución de calidad por secuencia (Per sequence quality scores): Confirma que la gran mayoría de las lecturas tienen un comportamiento uniforme de calidad alta, concentrándose el grueso de los datos en valores Phred superiores a Q40.
+</p>
+
+<p align="center">
+<img width="350" height="280" alt="image" src="https://github.com/user-attachments/assets/fb66df37-1073-42dc-95d0-de89a7d31367" />
+<br>
+Figura 3.  Gráfico de la calidad de Secuencias por Base, secuencia Forward.
 </p>
 
 ##### 3.1.3 Análisis de Alertas y Fallos.
 <p align="justify">
 A pesar de la robustez general en la precisión de las bases individuales, el reporte arrojó llamadas de atención en los siguientes módulos:
-- Calidad por azulejo (Per tile sequence quality): El mapa de calor azul revela algunas trazas discretas en tonos verdes/amarillos aislados (por ejemplo, cerca de la posición 60-64 pb en canales específicos de celdas de flujo).
+- Calidad por celda (Per tile sequence quality): El mapa de calor azul revela algunas trazas discretas en tonos verdes/amarillos aislados (por ejemplo, cerca de la posición 60-64 pb en canales específicos de celdas de flujo).
+</p>
+
+  <p align="center">
+<img width="350" height="280" alt="image" src="https://github.com/user-attachments/assets/5a4c9daa-ef0d-4b0f-aeff-d80ce48cf0d2" />
+<br>
+Figura 4.  Gráfico de la calidad de Secuencias por celda, secuencia Forward.
+  </p>
+  
+<p align="justify">
 - Contenido de GC por secuencia (Per sequence GC content): La curva empírica de distribución de GC (línea magenta) se ajusta razonablemente bien a la distribución teórica normal (línea azul). Sin embargo, la alerta se dispara debido a un ligero ensanchamiento y un hombro menor hacia la izquierda de la gráfica (entre el 30% y 40% de GC).
+</p>
+
+<p align="center">
+<img width="350" height="280" alt="image" src="https://github.com/user-attachments/assets/4d463a17-fb90-4389-8715-29f8b6758657" />
+<br>
+Figura 5.  Gráfico del contenido de GC por secuencia, secuencia Forward.
+</p>
+<p align="justify">
 - Contenido de bases por posición (Per base sequence content): Este módulo reporta un fallo crítico debido a las fluctuaciones severas observadas en los primeros 9 a 10 pares de bases de las lecturas. Teóricamente, las líneas de las cuatro bases (A, T, C, G) deberían correr paralelas y estables. En este caso, se aprecian picos y valles pronunciados en los extremos 5'.
+</p>
+<p align="center">
+<img width="350" height="280" alt="image" src="https://github.com/user-attachments/assets/e83ec109-9822-46b2-adbb-d80ed2fbe064" />
+<br>
+Figura 6.  Gráfico del contenido de Secuencias por base, secuencia Forward. 
 </p>
 
 #### 3.2	Calidad de secuencias recortadas (segundo corte).
 <p align="justify">
 Tras someter el set de datos de la secuencia despues del primer corte a un segundo proceso de curación bioinformática mediante la herramienta Trimmomatic, se evaluó la efectividad del filtrado ejecutando un tercer análisis de control de calidad con FastQC. Los resultados muestran una mejora sustancial en la homogeneidad de la composición de bases y la remoción absoluta de secuencias de adaptadores, consolidando un set de lecturas altamente confiable para las etapas posteriores de ensamblaje o alineamiento.
+</p>
+<p align="center">
+<img width="350" height="280" alt="image" src="https://github.com/user-attachments/assets/17e56a91-b0a8-438e-8e3f-73db424fc721" />
+<br>
+Figura 7. Resumen del reporte FastQC secuencia, después del segundo corte. secuencia Forward.
 </p>
 
 ##### 3.2.1 Modificaciones en las Estadísticas Básicas
@@ -93,15 +132,40 @@ El proceso de limpieza modificó los parámetros estructurales de la siguiente m
 ##### 3.2.2 Evaluación de Módulos Corregidos y Optimizados.
 <p align="justify">
 -	Contenido de bases por posición (Per base sequence content): Este módulo pasó de una condición de fallo crítico a un estado completamente óptimo. Las fluctuaciones severas que superaban el 10% de divergencia en los primeros 10 pb fueron eliminadas por completo. Ahora, las líneas de las cuatro bases (A, T, C, G) corren paralelas, estables y balanceadas de forma uniforme en un valor cercano al 25% desde la primera base hasta el final de la lectura. 
+</p>
+<p align="center">
+<img width="350" height="280" alt="image" src="https://github.com/user-attachments/assets/5716cf96-9216-4972-a156-bad27ee8bc4b" />
+<br>
+Figura 8. Gráfico del contenido de Secuencias por base después del segundo corte, secuencia Forward.
+</p>
+  <p align="justify">
 -	Calidad por base (Per base sequence quality): La calidad individual se mantiene en rangos de excelencia. Los puntajes Phred se estabilizan uniformemente en la zona verde (Q > 28), mostrando una mediana plana de Q44 a lo largo de casi toda la extensión de las lecturas, con una dispersión mínima en los percentiles inferiores que apenas roza Q40 en las últimas posiciones.
+  </p>
+  <p align="center">
+<img width="350" height="280" alt="image" src="https://github.com/user-attachments/assets/2df40b55-ac9f-42fa-bc2a-f5ca795be09d" />
+<br>
+Figura 9. Gráfico de la calidad de Secuencias por Base despues del segundo corte, secuencia Forward.
+  </p>
+<p align="justify">
 -	Contenido de adaptadores (Adapter Content): El indicador cambió a un estado completamente limpio. El remanente de secuencias de vectores Illumina detectado en el extremo 3' de la corrida cruda fue removido al 100%.
 </p>
 
 ##### 3.2.3 Persistencia de Alertas y Anomalías Locales.
 <p align="justify">
 A pesar de la optimización general, el reporte conserva llamadas de atención en dos módulos específicos que responden a características intrínsecas de la corrida física y de la muestra:
--	Calidad por azulejo (Per tile sequence quality): Este indicador pasó de una alerta a un fallo. El mapa de calor revela manchas densas y localizadas en tonalidades verdes, amarillas y rojas (por ejemplo, en los azulejos de la serie 21202 y 21102 entre las posiciones 37 pb y 55 pb).
+-	Calidad por celda (Per tile sequence quality): Este indicador pasó de una alerta a un fallo. El mapa de calor revela manchas densas y localizadas en tonalidades verdes, amarillas y rojas (por ejemplo, en los azulejos de la serie 21202 y 21102 entre las posiciones 37 pb y 55 pb).
+</p>
+<p align="center">
+<img width="350" height="280" alt="image" src="https://github.com/user-attachments/assets/8b5ea685-bdee-41aa-8315-e037f87d9637" />
+<br>
+Figura 10. Gráfico de la calidad de Secuencias por celda, después del segundo corte, secuencia Forward.
+</p>
 -	Contenido de GC por secuencia (Per sequence GC content): La alerta persiste debido a que la distribución empírica de GC continúa mostrando un ligero ensanchamiento en el flanco izquierdo (bajas concentraciones de GC, entre el 30% y 40%) en comparación con el modelo teórico gaussiano. 
+</p>
+<p align="center">
+<img width="350" height="280" alt="image" src="https://github.com/user-attachments/assets/7bd3882a-3c3e-4f0b-ba95-3eb1b42286ff" />
+<br>
+Figura 11. Gráfico del contenido de GC por secuencia después del segundo corte, secuencia Forward.
 </p>
 
 #### 3.3	Ensamblaje Shovell.
@@ -131,6 +195,13 @@ El ensamblaje crudo produjo un total de 88 contigs primarios con una longitud to
 Para evaluar cuantitativamente la contigüidad, completitud y calidad estructural del borrador genómico generado por Shovill, se empleó la herramienta QUAST (Quality Assessment Tool for Genome Assemblies). Los resultados indican que el ensamblaje es altamente contiguo y representativo del genoma esperado para Escherichia coli, careciendo de brechas (gaps) o bases indeterminadas.
 </p>
 
+<p align="center">
+<img width="350" height="280" alt="image" src="https://github.com/user-attachments/assets/3fdf29d4-b812-4fb5-bb27-9f2789a684d3" />
+<br>
+Figura 12. Evaluación del ensamblaje con QUAST con indicadores del ensamblaje como números de contings, longitud total., n50, L50 y 
+contenido de GC.
+</p>
+
 ##### 3.4.1 Métricas Globales del Genoma.
 <p align="justify">
 El ensamblaje consolidó un total de 69 contigs, sumando una longitud genómica total de 4,586,183 pb (~4.58 Mbp). Esta extensión concuerda perfectamente con el tamaño del genoma de referencia biológico esperado para E. coli (típicamente entre 4.5 y 5.5 Mbp).
@@ -150,9 +221,20 @@ La robustez de un ensamblaje de novo basado en lecturas cortas (Illumina) se eva
 El gráfico de longitud acumulada (Cumulative length) respalda visualmente la alta calidad del ensamblaje. La curva exhibe un ascenso marcadamente pronunciado en el eje Y (longitud) durante los primeros 20 a 30 contigs en el eje X, para luego aplanarse asintóticamente al acercarse a los 4.58 Mbp.
 </p>
 
+<p align="center">
+<img width="350" height="280" alt="image" src="https://github.com/user-attachments/assets/431d8bfe-0858-44c4-90a8-6b574f2c7df4" />
+<br>
+Figura 13. Curva acumulada de longitud de contings
+</p>
+
 #### 3.5	Anotacion Prokka.
 <p align="justify">
 Una vez validada la integridad y contigüidad del ensamblaje genómico mediante QUAST, los 69 contigs resultantes (abarcando 4,586,183 pb) fueron sometidos a un proceso de anotación automatizada utilizando el pipeline Prokka. 
+</p>
+<p align="center">
+<img width="350" height="280" alt="image" src="https://github.com/user-attachments/assets/e0eaf371-ca67-4e3a-a3ed-f4901fa0ed08" />
+<br>
+Figura 14. Resumen generado por Prokka, donde se identifican genes, CDS, rRNA, tRNA y tmRNA.
 </p>
 
 ##### 3.5.1 Estadísticas Globales de la Anotación.
@@ -169,6 +251,11 @@ El reporte general generado por el software demuestra un perfil de anotación al
 ##### 3.5.2 Identificación de Elementos Funcionales Claves (Housekeeping Genes).
 <p align="justify">
 La evaluación cualitativa de las tablas de características (features) confirma que el proceso de ensamblaje y anotación conservó la estructura de operones vitales y genes de mantenimiento celular (housekeeping), sin evidencias de truncamientos críticos tempranos. 
+</p>
+<p align="center">
+<img width="350" height="280" alt="image" src="https://github.com/user-attachments/assets/5b930baa-bac7-42fb-81ee-3cf03c2bf2c3" />
+<br>
+Figura 15. Tabla de genes anotados en Prokka con información relacionada con la ubicación, tipo de elemento genético y función.
 </p>
 
 ### 4. Discusión
