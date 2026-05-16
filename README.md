@@ -3,7 +3,7 @@ Herramientas Ómicas 1
 Grupo 6
 <p align="justify">
   
-# Proyecto: Análisis de calidad, ensamblaje y caracterización genómica de Escherichia coli a partir de secuencias FASTQ
+# Proyecto: Análisis de calidad, ensamblaje y caracterización genómica de <i>Escherichia coli</i> a partir de secuencias FASTQ
 </p>
 
 ## 1. Integrantes
@@ -13,13 +13,13 @@ Grupo 6
   
 ## 2. Objetivo
 <p align="justify">
-Procesar lecturas FASTQ de Escherichia coli mediante control de calidad, depuración y ensamblaje de novo, con el fin de obtener una secuencia genómica evaluable e identificar parámetros relevantes como longitud del ensamblaje, contenido GC, cobertura y posibles regiones codificantes.  
+Procesar lecturas FASTQ de <i>Escherichia coli</i> mediante control de calidad, depuración y ensamblaje de novo, con el fin de obtener una secuencia genómica evaluable e identificar parámetros relevantes como longitud del ensamblaje, contenido GC, cobertura y posibles regiones codificantes.  
 </p>
   
 ## 3. Dataset
-Se utilizaron secuencias públicas de Escherichia coli obtenidas desde:  
+Se utilizaron secuencias públicas de <i>Escherichia coli</i> obtenidas desde:  
 - NCBI SRA  
-SRX33263328: WGS of Escherichia coli  
+SRX33263328: WGS of <i>Escherichia coli</i>  
 https://www.ncbi.nlm.nih.gov/sra/?term=SRX33263328  
 <img width="489" height="79" alt="image" src="https://github.com/user-attachments/assets/78716019-c444-4367-a96a-d73f56392abf" />
 
@@ -38,7 +38,7 @@ Link: https://training.galaxyproject.org/training-material/topics/assembly/tutor
 
 ## 5. Resultados  
 <p align="justify">
-El ensamblaje de Escherichia coli presentó 109 contigs, una longitud total de 4.707.967 pb y un contenido GC de 50,57 %, valores coherentes con lo esperado para esta especie. El contig más largo fue de 286.319 pb, con un N50 de 113.582 pb y un L50 de 14, lo que indica una continuidad moderada del ensamblaje. Además, la ausencia de bases ambiguas (0 N por 100 kbp) representa un indicador positivo de calidad.
+El ensamblaje de <i>Escherichia coli</i> presentó 109 contigs, una longitud total de 4.707.967 pb y un contenido GC de 50,57 %, valores coherentes con lo esperado para esta especie. El contig más largo fue de 286.319 pb, con un N50 de 113.582 pb y un L50 de 14, lo que indica una continuidad moderada del ensamblaje. Además, la ausencia de bases ambiguas (0 N por 100 kbp) representa un indicador positivo de calidad.
 </p>
 
 <p align="justify">
