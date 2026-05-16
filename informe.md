@@ -17,7 +17,7 @@ Procesar lecturas FASTQ de Escherichia coli mediante control de calidad, depurac
 Echerichia coli es uno de los microorganismos modelo más utilizados en biología molecular, microbiología y bioinformática debido a que posee un genoma relativamente pequeño, ampliamente caracterizado y disponible en múltiples bases de datos genómicas públicas. Además de su importancia como organismo modelo, algunas cepas de E. coli tienen relevancia clínica y biotecnológica, ya que pueden participar en procesos industriales, producción de proteínas recombinantes y estudios relacionados con resistencia antimicrobiana y evolución bacteriana (Yibar et al., 2024).
 </p>
 <p align="justify">
-El desarrollo de tecnologías de secuenciación masiva ha permitido generar grandes volúmenes de datos genómicos bacterianos en formatos como FASTQ, facilitantdo el análisis bioinformático de genomas completos mediante flujos de trabajo de ensamblaje y anotación. Actualmente, herramientas como FastQC, Trimmomatic, SPAdes, QUAST y Prokka son ampliamente utilizadas para evaluar calidad de lecturas, ensamblar genomas de novo y caracterizar regiones funcionales bacterianas (Batut et al., 2024). Estas herramientas permiten obtener métricas importantes como contenido GC, número de contigs, continuidad del ensamblaje y predicción de genes codificantes.
+El desarrollo de tecnologías de secuenciación masiva ha permitido generar grandes volúmenes de datos genómicos bacterianos en formatos como FASTQ, facilitantdo el análisis bioinformático de genomas completos mediante flujos de trabajo de ensamblaje y anotación en plataformas reproducibles como Galaxy (Batut et al., 2024). Actualmente, herramientas como FastQC, Trimmomatic, SPAdes, QUAST y Prokka son ampliamente utilizadas para evaluar calidad de lecturas, ensamblar genomas de novo y caracterizar regiones funcionales bacterianas. Estas herramientas permiten obtener métricas importantes como contenido GC, número de contigs, continuidad del ensamblaje y predicción de genes codificantes (Batut et al., 2024; Galaxy Training Network, 2024).
 </p>
 <p align="justify">
 En este proyecto se trabajó con secuencias WGS (Whole Genome Sequencing) de Echerichia coli obtenidas desde el repositorio SRA del NCBI, específicamente el dataset SRR38439492. El objetivo fue procesar lecturas FASTQ mediante control de calidad, depuración y ensamblaje de novo, con el fin de obtener un ensamblaje genómico evaluable e identificar parámetros relevantes como longitud del ensamblaje, cobertura y regiones potencialmente codificantes. Este tipo de análisis constituye una base fundamental para estudios de genómica comparativa, evolución bacteriana y caracterización funcional de microorganismos procariotas (Schwengers et al., 2021).
@@ -284,12 +284,16 @@ La implementación del flujo de trabajo automatizado Shovill, soportado por el m
 La anotación realizada con Prokka permitió identificar correctamente genes codificantes y elementos funcionales esenciales del genoma de *E. coli*, demostrando que el ensamblaje obtenido es biológicamente interpretabla y adecuado para futuros análisis genómicos y funcionales.
 </p>
 
-### 6. Referencias bibliográficas  
+### 7. Referencias bibliográficas  
 
-
-Batut, B., et al. (2024). Assembly of metagenomic sequencing data. Galaxy Training Network. https://training.galaxyproject.org/training-material/topics/assembly/tutorials/metagenomics-assembly/tutorial.html
 
 Batut, B., Hiltemann, S., Bagnacani, A., et al. (2024). The Galaxy platform for accessible, reproducible and collaborative biomedical analyses: 2024 update. Nucleic Acids Research, 52(W1), W83–W94. https://doi.org/10.1093/nar/gkae410
+
+Feldgarden, M., Brover, V., Gonzalez-Escalona, N., Frye, J. G., Haendiges, J., Haft, D. H., Hoffmann, M., Pettengill, J. B., Prasad, A. B., Tillman, G. E., Tyson, G. H., Klimke, W., & Waterman, M. S. (2021). AMRFinderPlus and the Reference Gene Catalog facilitate examination of the genomic links among antimicrobial resistance, stress response, and virulence. Scientific Reports, 11, 12728. https://doi.org/10.1038/s41598-021-91456-0
+
+Galaxy Training Network. (2024). Assembly of metagenomic sequencing data. Galaxy Project. https://training.galaxyproject.org/training-material/topics/assembly/tutorials/metagenomics-assembly/tutorial.html
+
+Galaxy Training Network. (2024). Genome annotation. Galaxy Project. https://training.galaxyproject.org/training-material/topics/genome-annotation/
 
 Lobb, B., Tremblay, B. J. M., Moreno-Hagelsieb, G., & Doxey, A. C. (2020). An assessment of genome annotation coverage across the bacterial tree of life. Microbial Genomics, 6(3), e000341. https://doi.org/10.1099/mgen.0.000341
 
