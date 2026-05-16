@@ -260,6 +260,12 @@ Figura 15. Tabla de genes anotados en Prokka con información relacionada con la
 
 ### 4. Discusión
 <p align="justify">
+El ensamblaje de novo de genomas bacterianos a partir de secuencias de lectura corta (como las generadas por plataformas Illumina) presenta el desafío técnico de resolver regiones repetitivas y maximizar la contigüidad sin comprometer la precisión a nivel de nucleótido. La estrategia adoptada mediante el pipeline Shovill demostró ser metodológicamente adecuada para este fin. La profundidad de secuenciación calculada de 27.75X, proyectada sobre un tamaño genómico de 5.0 Mbp, se sitúa dentro del rango funcional aceptable para la reconstrucción genómica. Aunque la literatura establece que las coberturas óptimas para maximizar la contigüidad en plataformas de lectura corta oscilan entre 50X y 100X, coberturas cercanas a 30X son estadísticamente suficientes para recuperar más del 95% del espacio codificante en genomas bacterianos (Sims et al., 2014). La decisión automatizada del algoritmo de no aplicar un submuestreo (downsampling) fue acertada, ya que permitió capitalizar la totalidad de los 138.8 Mbp viables, mitigando el riesgo de generar brechas (gaps) en regiones de difícil amplificación.
+</p>
+<p align="justify">
+El éxito del ensamblaje se sustenta directamente en la arquitectura del motor SPAdes, el cual supera las limitaciones tradicionales de los grafos de De Bruijn al implementar un enfoque iterativo multi-k-mer (Bankevich et al., 2012). La utilización escalonada de k-mers desde 31 hasta 127 permitió un balance algorítmico ideal: los k-mers más pequeños garantizaron el anclaje de lecturas en zonas de baja cobertura o con ligeras variaciones, mientras que los k-mers más largos (como 103 y 127) fueron esenciales para trazar puentes efectivos a través de secuencias repetitivas, como los operones ribosomales. Esta heurística es la responsable directa de haber colapsado la red del grafo en únicamente 88 contigs primarios.
+</p>
+<p align="justify">
 Los resultados obtenidos con QUAST permiten evaluar de forma más clara la calidad del ensamblaje genómico de Escherichia coli. En la figura 12 se presentan indicadores como el número de conting, la longitud total del ensamblaje, el N50, el L50 y el contenido de GC. Estas métricas son importantes porque ayudan a determinar si el genoma emsamblado es continuo,completo y confiable. QUAST y WebQUAST son herramientas usadas para evaluar ensamblajes genómicos mediante este tipo de parámetros (Mikheenko et al., 2023).  
 </p>
 <p align="justify">
@@ -278,13 +284,14 @@ La tabla de anotación mostrada en la figura 15 evidencia la identificación de 
 ### 5. Aplicaciones 
 
 ### 5.1 Vigilancia epidemiológica y salud pública
-
+<p align="justify">
 Los resultados obtenidos mediante el ensamblaje con Shovill, la evaluación con QUAST y la anotación funcional con Prokka permiten aplicar herramientas de genómica bacteriana en vigilancia epidemiológica en *Escherichia coli*. La identificación de genes codificantes, regiones funcionales y métricas de calidad del ensamblaje facilita la comparación entre cepas bacterianas y la detección de posibles factores asociados con virulencia o resistencia antimicrobiana. Este tipo de análisis ha sido ampliamente utiliado en el monitoreo de cepas patógenas de *E. coli* involucradas en brotes alimentarios y contaminación ambiental, permitiendo establecer relaciones filogenéticas, identificar genes de resistencia antimicrobiana y rastrear fuentes de infección mediante secuenciación genómica completa (Feldgarden et al., 2021; Schwengers et al., 2021).
-
+</p>
 
 ### 5.2 Biotecnología y producción de proteínas recombinantes
-
+<p align="justify">
 La información obtenida en este proyecto también tiene aplicación en biotecnología e ingeniería genética, debido a que *Escherichia coli* continúa siendo uno de los principales microorganismos utilizados para producción de proteínas recombinantes y estudios metabólicos. La anotación funcional obtenida mediante Prokka permitió identificar genes asociados con transporte molecular, metabolismo y síntesis proteica, lo cual constituye una base importante para futuras aplicaciones en biología sintética y optimización bacteriana. Actualmente, el análisis genómico y funcional de cepas de *E. coli* es utilizado en el desarrollo de microorganismos destinados a la producción de insulina recombinante, enzimas industriales y compuestos de interés biomédico (Batut et al., 2024; Lobb et al., 2020).
+</p>
 
 ### 6. Conclusiones 
 <p align="justify">
@@ -312,6 +319,11 @@ Lobb, B., Tremblay, B. J. M., Moreno-Hagelsieb, G., & Doxey, A. C. (2020). An as
 Schwengers, O., Jelonek, L., Dieckmann, M. A., Beyvers, S., Blom, J., & Goesmann, A. (2021). Bakta: Rapid and standardized annotation of bacterial genomes via alignment-free sequence identification. Microbial Genomics, 7(11), 000685. https://doi.org/10.1099/mgen.0.000685
 
 Yibar, A., et al. (2024). First report and genomic characterization of Escherichia coli O111 from cattle. BMC Genomics, 25, 10945. https://doi.org/10.1186/s12864-024-10945-4
+
+Bankevich, A., Nurk, S., Antipov, D., Gurevich, A. A., Dvorkin, M., Kulikov, A. S., ... & Pevzner, P. A. (2012). SPAdes: a new genome assembly algorithm and its applications to single-cell sequencing. Journal of Computational Biology, 19(5), 455-477.
+
+Sims, D., Sudbery, I., Ilott, N. E., Heger, A., & Ponting, C. P. (2014). Sequencing depth and coverage: key considerations in genomic analyses. Nature Reviews Genetics, 15(2), 121-132.
+
 
 
 
