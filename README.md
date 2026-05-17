@@ -78,3 +78,14 @@ Evaluación del ensamblaje (Quast)
  ↓
 Anotación (Prokka)
 ```
+
+## 8. Uso de herramientas de IA 
+
+Dentro de este proyecto, como IAs asistentes se utilizaron Gemini y ChatGPT.
+
+<p align="justify">
+Si bien se siguieron los pasos de tutoriales explicativos dentro de la plataforma Galaxy, la ayuda de la IA se la empleo a conocer más las herramientas dentro de Galaxy y que realiza cada apartado de opciones ofrece, se le pidió a la IA que analice posibles errores dentro de su uso. Posteriormente la IA se usó para corroborar los resultados que arrojan las herramientas de Galaxy como también la interpretación del código resultante en cada sección.
+
+<p align="justify">
+Otro lugar donde se usó fue en la terminal, esto facilita para reconocer errores al correr la línea de comando,
+brindando soluciones y optimizando tiempos de corrida de programas para obtener los resultados requeridos.
